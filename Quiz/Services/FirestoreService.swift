@@ -1,5 +1,5 @@
 //
-//  FirestoreDataFetcher.swift
+//  FirestoreService.swift
 //  Quiz
 //
 //  Created by Ботурбек Имомдодов on 22/11/23.
