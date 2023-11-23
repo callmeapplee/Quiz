@@ -7,7 +7,6 @@
 
 import UIKit
 import SnapKit
-import FirebaseAuth
 enum AuthType:String{
     case register = "Регистрация"
     case login = "Авторизация"
@@ -161,17 +160,16 @@ class AuthViewController: UIViewController {
         }
         switch authType {
         case .register :
-            Auth.auth().createUser(withEmail: emailText, password: passwordText) { (user,error) in
+            AuthService.shared.createUser(withEmail: emailText, password: passwordText) { (user,error) in
                 if user != nil {
-                    UserDefaults.standard.set(self.name.text!, forKey: "userName")
-//                    self.navigationController?.pushViewController(ChatViewController(), animated: true)
+                   self.navigationController?.pushViewController(QuizzesViewController(), animated: true)
                 }
             }
         case .login:
-            Auth.auth().signIn(withEmail: emailText, password: passwordText){
+            AuthService.shared.signIn(withEmail: emailText, password: passwordText){
                 (user,error) in
                 if user != nil {
-//                    self.navigationController?.pushViewController(ChatViewController(), animated: true)
+                    self.navigationController?.pushViewController(QuizzesViewController(), animated: true)
                 }
             }
         }

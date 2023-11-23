@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
@@ -16,16 +15,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         // Instantiate your root view controller
-        let navigationController = UINavigationController(rootViewController: AuthViewController())
+        
+        var navigationController:UINavigationController? = nil
+        if AuthService.shared.isAuthorized {
+            navigationController = UINavigationController(rootViewController: QuizzesViewController())
+        }
+        else{
+            navigationController = UINavigationController(rootViewController: AuthViewController())
+        }
         
         // Create a UIWindow using the windowScene constructor
         window = UIWindow(windowScene: windowScene)
         
         // Set the root view controller
-        window?.rootViewController = navigationController
+        window?.rootViewController = navigationController!
         
         // Make the window visible
         window?.makeKeyAndVisible()

@@ -8,18 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		D4DDD051B29826D20302E0B2 /* Pods_Quiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E731E00A3E2BBB1840073C /* Pods_Quiz.framework */; };
+		FA62A84B2B0E009000796764 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62A84A2B0E009000796764 /* User.swift */; };
+		FA62A84D2B0E01CC00796764 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62A84C2B0E01CC00796764 /* Quiz.swift */; };
+		FA62A84F2B0E15CF00796764 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA62A84E2B0E15CF00796764 /* GoogleService-Info.plist */; };
+		FA62A8512B0E170700796764 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62A8502B0E170700796764 /* AuthService.swift */; };
+		FA62A8552B0E1D0E00796764 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62A8542B0E1D0E00796764 /* NetworkDataFetcher.swift */; };
+		FA62A8572B0E23C100796764 /* FirestoreDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62A8562B0E23C100796764 /* FirestoreDataFetcher.swift */; };
 		FAD81D622B07E52600E818FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD81D612B07E52600E818FA /* AppDelegate.swift */; };
 		FAD81D642B07E52600E818FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD81D632B07E52600E818FA /* SceneDelegate.swift */; };
 		FAD81D6B2B07E52700E818FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD81D6A2B07E52700E818FA /* Assets.xcassets */; };
 		FAD81D6E2B07E52700E818FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD81D6C2B07E52700E818FA /* LaunchScreen.storyboard */; };
 		FAD81D772B07E80100E818FA /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD81D762B07E80100E818FA /* AuthViewController.swift */; };
-		FAE442DB2B07FB0E00ABB0D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAE442DA2B07FB0E00ABB0D2 /* GoogleService-Info.plist */; };
+		FAF6BECE2B091BF1001F2AAC /* QuizzesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6BECD2B091BF1001F2AAC /* QuizzesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		28E731E00A3E2BBB1840073C /* Pods_Quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C74A7FEA848D46C1B6F4BD /* Pods-Quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quiz.debug.xcconfig"; path = "Target Support Files/Pods-Quiz/Pods-Quiz.debug.xcconfig"; sourceTree = "<group>"; };
 		C3C5E4173D37F2209BDD2841 /* Pods-Quiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quiz.release.xcconfig"; path = "Target Support Files/Pods-Quiz/Pods-Quiz.release.xcconfig"; sourceTree = "<group>"; };
+		FA62A84A2B0E009000796764 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FA62A84C2B0E01CC00796764 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		FA62A84E2B0E15CF00796764 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FA62A8502B0E170700796764 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		FA62A8542B0E1D0E00796764 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		FA62A8562B0E23C100796764 /* FirestoreDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataFetcher.swift; sourceTree = "<group>"; };
 		FAD81D5E2B07E52600E818FA /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD81D612B07E52600E818FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD81D632B07E52600E818FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +39,7 @@
 		FAD81D6D2B07E52700E818FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAD81D6F2B07E52700E818FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD81D762B07E80100E818FA /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		FAE442DA2B07FB0E00ABB0D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FAF6BECD2B091BF1001F2AAC /* QuizzesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FA62A8482B0E006C00796764 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA62A8492B0E008000796764 /* Models */,
+				FA62A8502B0E170700796764 /* AuthService.swift */,
+				FA62A8542B0E1D0E00796764 /* NetworkDataFetcher.swift */,
+				FA62A8562B0E23C100796764 /* FirestoreDataFetcher.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA62A8492B0E008000796764 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA62A84A2B0E009000796764 /* User.swift */,
+				FA62A84C2B0E01CC00796764 /* Quiz.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FAD81D552B07E52600E818FA = {
 			isa = PBXGroup;
 			children = (
@@ -80,23 +112,33 @@
 		FAD81D602B07E52600E818FA /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				FAD81D752B07E7DE00E818FA /* Auth Controller */,
+				FA62A8482B0E006C00796764 /* Services */,
+				FAF6BECC2B08FC3D001F2AAC /* Quizzes */,
+				FAD81D752B07E7DE00E818FA /* Auth */,
 				FAD81D612B07E52600E818FA /* AppDelegate.swift */,
 				FAD81D632B07E52600E818FA /* SceneDelegate.swift */,
 				FAD81D6A2B07E52700E818FA /* Assets.xcassets */,
 				FAD81D6C2B07E52700E818FA /* LaunchScreen.storyboard */,
 				FAD81D6F2B07E52700E818FA /* Info.plist */,
-				FAE442DA2B07FB0E00ABB0D2 /* GoogleService-Info.plist */,
+				FA62A84E2B0E15CF00796764 /* GoogleService-Info.plist */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
 		};
-		FAD81D752B07E7DE00E818FA /* Auth Controller */ = {
+		FAD81D752B07E7DE00E818FA /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				FAD81D762B07E80100E818FA /* AuthViewController.swift */,
 			);
-			path = "Auth Controller";
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FAF6BECC2B08FC3D001F2AAC /* Quizzes */ = {
+			isa = PBXGroup;
+			children = (
+				FAF6BECD2B091BF1001F2AAC /* QuizzesViewController.swift */,
+			);
+			path = Quizzes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,8 +202,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD81D6E2B07E52700E818FA /* LaunchScreen.storyboard in Resources */,
-				FAE442DB2B07FB0E00ABB0D2 /* GoogleService-Info.plist in Resources */,
 				FAD81D6B2B07E52700E818FA /* Assets.xcassets in Resources */,
+				FA62A84F2B0E15CF00796764 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,9 +256,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA62A8552B0E1D0E00796764 /* NetworkDataFetcher.swift in Sources */,
+				FAF6BECE2B091BF1001F2AAC /* QuizzesViewController.swift in Sources */,
 				FAD81D622B07E52600E818FA /* AppDelegate.swift in Sources */,
+				FA62A8572B0E23C100796764 /* FirestoreDataFetcher.swift in Sources */,
+				FA62A84D2B0E01CC00796764 /* Quiz.swift in Sources */,
 				FAD81D772B07E80100E818FA /* AuthViewController.swift in Sources */,
+				FA62A84B2B0E009000796764 /* User.swift in Sources */,
 				FAD81D642B07E52600E818FA /* SceneDelegate.swift in Sources */,
+				FA62A8512B0E170700796764 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
