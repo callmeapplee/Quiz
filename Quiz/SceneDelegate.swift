@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         var navigationController:UINavigationController? = nil
         if AuthService.shared.isAuthorized {
-            navigationController = UINavigationController(rootViewController: QuizzesViewController())
+            navigationController = UINavigationController(rootViewController: UsersViewController())
         }
         else{
             navigationController = UINavigationController(rootViewController: AuthViewController())

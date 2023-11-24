@@ -1,15 +1,12 @@
 //
-//  QuizzesViewController.swift
+//  UsersViewController.swift
 //  Quiz
 //
 //  Created by Ботурбек Имомдодов on 18/11/23.
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseDatabase
-import FirebaseFirestore
-class QuizzesViewController: UIViewController {
+class UsersViewController: UIViewController {
     var users:[User] = []
     private  var tableView:UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
@@ -50,7 +47,7 @@ class QuizzesViewController: UIViewController {
     */
 
 }
-extension QuizzesViewController:UITableViewDataSource{
+extension UsersViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }

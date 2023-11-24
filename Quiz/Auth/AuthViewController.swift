@@ -162,14 +162,14 @@ class AuthViewController: UIViewController {
         case .register :
             AuthService.shared.createUser(withEmail: emailText, password: passwordText) { (user,error) in
                 if user != nil {
-                   self.navigationController?.pushViewController(QuizzesViewController(), animated: true)
+                   self.navigationController?.pushViewController(UsersViewController(), animated: true)
                 }
             }
         case .login:
             AuthService.shared.signIn(withEmail: emailText, password: passwordText){
                 (user,error) in
                 if user != nil {
-                    self.navigationController?.pushViewController(QuizzesViewController(), animated: true)
+                    self.navigationController?.pushViewController(UsersViewController(), animated: true)
                 }
             }
         }
