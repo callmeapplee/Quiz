@@ -9,24 +9,23 @@ import Foundation
 import FirebaseDatabase
 import FirebaseAuth
 struct User {
+    let id:String
     let name:String
-    let ref:DatabaseReference?
     let quizzes:[Quiz]
-    init(name: String, ref: DatabaseReference?, quizzes: [Quiz]) {
+    init(id:String,  name:String,  quizzes:[Quiz]) {
+        self.id = id
         self.name = name
-        self.ref = nil
         self.quizzes = quizzes
     }
-    
     init(data:NSDictionary) {
+        id = data["id"] as! String
         name = data["name"] as! String
         quizzes = (data["quizzes"] as! [NSDictionary]).map({ quiz in
             Quiz(data: quiz)
         })
-        self.ref = nil
     }
     func convertToDictionary()->NSDictionary{
-        return ["name":name, "quizzes":quizzes.map({ quiz in
+        return ["id":id, "name":name, "quizzes":quizzes.map({ quiz in
             quiz.convertToDictionary()
         })]
     }

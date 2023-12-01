@@ -26,6 +26,9 @@ final class FirestoreService{
             completion(users)
         }
     }
+    func setUser(user:User) {
+        usersRef.updateData([user.id : user.convertToDictionary()])
+    }
     
     
 }

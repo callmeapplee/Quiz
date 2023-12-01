@@ -22,7 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         var navigationController:UINavigationController? = nil
         if AuthService.shared.isAuthorized {
-            navigationController = UINavigationController(rootViewController: UsersViewController())
+            navigationController = UINavigationController(rootViewController: TabBarViewController())
+            navigationController?.setNavigationBarHidden(true, animated: true)
         }
         else{
             navigationController = UINavigationController(rootViewController: AuthViewController())

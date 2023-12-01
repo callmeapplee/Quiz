@@ -162,14 +162,15 @@ class AuthViewController: UIViewController {
         case .register :
             AuthService.shared.createUser(withEmail: emailText, password: passwordText) { (user,error) in
                 if user != nil {
-                   self.navigationController?.pushViewController(UsersViewController(), animated: true)
+                   self.navigationController?.pushViewController(TabBarViewController(), animated: true)
+                    FirestoreService.shared.setUser(user: User(id: AuthService.shared.currentUser.uid, name: self.name.text!, quizzes: []))
                 }
             }
         case .login:
             AuthService.shared.signIn(withEmail: emailText, password: passwordText){
                 (user,error) in
                 if user != nil {
-                    self.navigationController?.pushViewController(UsersViewController(), animated: true)
+                    self.navigationController?.pushViewController(TabBarViewController(), animated: true)
                 }
             }
         }

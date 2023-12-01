@@ -1,12 +1,13 @@
 //
-//  UsersViewController.swift
+//  ProfileViewController.swift
 //  Quiz
 //
-//  Created by Ботурбек Имомдодов on 18/11/23.
+//  Created by Ботурбек Имомдодов on 24/11/23.
 //
 
 import UIKit
-class UsersViewController: UIViewController {
+
+class ProfileViewController: UIViewController {
     var users:[User] = []
     private  var tableView:UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
@@ -14,14 +15,34 @@ class UsersViewController: UIViewController {
         return tableView
     }()
     override func viewDidLoad() {
-        title = "Пользователи"
         super.viewDidLoad()
+        title = "Мои викторины"
+        let leftBarButton = UIBarButtonItem(title: "Выйти", style: .plain, target: self, action: #selector(rightBarButtonTapped))
+        leftBarButton.tintColor = .red
+        navigationItem.leftBarButtonItem = leftBarButton
+        navigationItem.rightBarButtonItem = leftBarButton
         self.view.backgroundColor = .white
         setupTableView()
         FirestoreService.shared.getUsers { [weak self] users in
-            self?.users = users
+            self?.users = users.filter({ user in
+                return AuthService.shared.currentUser.uid == user.id
+            })
             self?.tableView.reloadData()
         }
+    }
+    @objc func rightBarButtonTapped() {
+        let alert = UIAlertController(title: "Вы точно хотите выйти?", message: "Подтвердите свое действие", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Подтвердить", style: .destructive) { _ in
+            do {
+                try AuthService.shared.signOut()
+                self.tabBarController?.navigationController?.setViewControllers([AuthViewController()], animated: true)
+            }
+            catch(let error){
+                print(error.localizedDescription)
+            }
+        })
+        alert.addAction(UIAlertAction(title: "Отмена", style: .cancel))
+        present(alert, animated: true)
     }
     
     private func setupTableView(){
@@ -34,8 +55,6 @@ class UsersViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
-    
-    
 
     /*
     // MARK: - Navigation
@@ -48,7 +67,7 @@ class UsersViewController: UIViewController {
     */
 
 }
-extension UsersViewController:UITableViewDataSource{
+extension ProfileViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }

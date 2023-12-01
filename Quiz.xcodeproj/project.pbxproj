@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D4DDD051B29826D20302E0B2 /* Pods_Quiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E731E00A3E2BBB1840073C /* Pods_Quiz.framework */; };
+		FA1013162B10DF3A00BB9184 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1013152B10DF3A00BB9184 /* ProfileViewController.swift */; };
+		FA14C6882B1A284C00F9BC92 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA14C6872B1A284C00F9BC92 /* TabBarViewController.swift */; };
 		FA62A84B2B0E009000796764 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62A84A2B0E009000796764 /* User.swift */; };
 		FA62A84D2B0E01CC00796764 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62A84C2B0E01CC00796764 /* Quiz.swift */; };
 		FA62A84F2B0E15CF00796764 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA62A84E2B0E15CF00796764 /* GoogleService-Info.plist */; };
@@ -25,6 +27,8 @@
 		28E731E00A3E2BBB1840073C /* Pods_Quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C74A7FEA848D46C1B6F4BD /* Pods-Quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quiz.debug.xcconfig"; path = "Target Support Files/Pods-Quiz/Pods-Quiz.debug.xcconfig"; sourceTree = "<group>"; };
 		C3C5E4173D37F2209BDD2841 /* Pods-Quiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quiz.release.xcconfig"; path = "Target Support Files/Pods-Quiz/Pods-Quiz.release.xcconfig"; sourceTree = "<group>"; };
+		FA1013152B10DF3A00BB9184 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FA14C6872B1A284C00F9BC92 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FA62A84A2B0E009000796764 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FA62A84C2B0E01CC00796764 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		FA62A84E2B0E15CF00796764 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -67,6 +71,14 @@
 				C3C5E4173D37F2209BDD2841 /* Pods-Quiz.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA14C6862B1A1AE500F9BC92 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FA1013152B10DF3A00BB9184 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		FA62A8482B0E006C00796764 /* Services */ = {
@@ -112,12 +124,14 @@
 				FA62A8482B0E006C00796764 /* Services */,
 				FAF6BECC2B08FC3D001F2AAC /* Users */,
 				FAD81D752B07E7DE00E818FA /* Auth */,
+				FA14C6862B1A1AE500F9BC92 /* Profile */,
 				FAD81D612B07E52600E818FA /* AppDelegate.swift */,
 				FAD81D632B07E52600E818FA /* SceneDelegate.swift */,
 				FAD81D6A2B07E52700E818FA /* Assets.xcassets */,
 				FAD81D6C2B07E52700E818FA /* LaunchScreen.storyboard */,
 				FAD81D6F2B07E52700E818FA /* Info.plist */,
 				FA62A84E2B0E15CF00796764 /* GoogleService-Info.plist */,
+				FA14C6872B1A284C00F9BC92 /* TabBarViewController.swift */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -259,7 +273,9 @@
 				FA62A84D2B0E01CC00796764 /* Quiz.swift in Sources */,
 				FAD81D772B07E80100E818FA /* AuthViewController.swift in Sources */,
 				FA62A84B2B0E009000796764 /* User.swift in Sources */,
+				FA1013162B10DF3A00BB9184 /* ProfileViewController.swift in Sources */,
 				FAD81D642B07E52600E818FA /* SceneDelegate.swift in Sources */,
+				FA14C6882B1A284C00F9BC92 /* TabBarViewController.swift in Sources */,
 				FA62A8512B0E170700796764 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
